@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="CRMAPPSuite" parallel="tests">
+  <test thread-count="5" name="ChromeTest" parallel="tests">
+    <parameter name="Browser" value="Chrome" />
+  <parameter name="UserName" value="velmurugan" />
+	<parameter name="Password" value="9789679298" />
+    <classes>
+      <class name="com.vmetry.crmapp.testcase.CRMAppwebPageTest"/>
+    </classes>
+  </test> <!-- CRMAPPparallelTest -->
+  
+   <test thread-count="5" name="FireFoxTest" parallel="tests">
+    <parameter name="Browser" value="FireFox" />
+  <parameter name="UserName" value="velmurugan" />
+	<parameter name="Password" value="9789679298" />
+    <classes>
+      <class name="com.vmetry.crmapp.testcase.CRMAppwebPageTest"/>
+    </classes>
+  </test> <!-- CRMAPPparallelTest -->
+</suite> <!-- CRMAPPSuite -->

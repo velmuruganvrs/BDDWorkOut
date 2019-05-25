@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [CRMAPPTestSuite]">
+  <listeners>
+    <listener class-name="com.vmetry.crmapp.retryanalyzer.RetryAnnotation"/>
+  </listeners>
+  <test thread-count="5" name="CRMAPPTest(failed)">
+    <parameter name="UserName" value="velmurugan"/>
+    <parameter name="Browser" value="Chrome"/>
+    <parameter name="Password" value="9789679298"/>
+    <classes>
+      <class name="com.vmetry.crmapp.testcase.CRMAppwebPageTest">
+        <methods>
+          <include name="companyPageTest" invocation-numbers="0 0 0 1 1 2 2"/>
+          <include name="contactPageTest" invocation-numbers="0 0 0 1 1 2 2"/>
+          <include name="loginCRMPage"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.vmetry.crmapp.testcase.CRMAppwebPageTest -->
+    </classes>
+  </test> <!-- CRMAPPTest(failed) -->
+</suite> <!-- Failed suite [CRMAPPTestSuite] -->

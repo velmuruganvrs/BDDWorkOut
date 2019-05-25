@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [CRMAPPSuite]" parallel="tests">
+  <test thread-count="5" name="ChromeTest(failed)" parallel="tests">
+    <parameter name="UserName" value="velmurugan"/>
+    <parameter name="Browser" value="Chrome"/>
+    <parameter name="Password" value="9789679298"/>
+    <classes>
+      <class name="com.vmetry.crmapp.testcase.CRMAppwebPageTest">
+        <methods>
+          <include name="companyPageTest"/>
+          <include name="contactPageTest"/>
+          <include name="loginCRMPage"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.vmetry.crmapp.testcase.CRMAppwebPageTest -->
+    </classes>
+  </test> <!-- ChromeTest(failed) -->
+  <test thread-count="5" name="FireFoxTest(failed)" parallel="tests">
+    <parameter name="UserName" value="velmurugan"/>
+    <parameter name="Browser" value="FireFox"/>
+    <parameter name="Password" value="9789679298"/>
+    <classes>
+      <class name="com.vmetry.crmapp.testcase.CRMAppwebPageTest">
+        <methods>
+          <include name="companyPageTest" invocation-numbers="1 2"/>
+          <include name="contactPageTest" invocation-numbers="0 1 2"/>
+          <include name="loginCRMPage"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- com.vmetry.crmapp.testcase.CRMAppwebPageTest -->
+    </classes>
+  </test> <!-- FireFoxTest(failed) -->
+</suite> <!-- Failed suite [CRMAPPSuite] -->
